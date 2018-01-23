@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+
+<EditTextPreference
+    android:title="Procenta jednička"
+    android:key="number_one"
+    android:summary="%s"
+    android:defaultValue="89"
+
+    />
+
+    <EditTextPreference
+        android:title="Procenta dvojka"
+        android:key="number_two"
+        android:summary="%s"
+        android:defaultValue="74"
+
+        />
+    <EditTextPreference
+        android:title="Procenta trojka"
+        android:key="number_three"
+        android:summary="%s"
+        android:defaultValue="59"
+
+        />
+    <EditTextPreference
+        android:title="Procenta čtverka"
+        android:key="number_four"
+        android:summary="%s"
+        android:defaultValue="39"
+
+        />
+
+    <SwitchPreference
+        android:key="round_up"
+        android:summary="Při označení zaokrouhluje nahoru"
+        android:defaultValue="true"
+        android:title="Zaokrouhlování nahoru" />
+
+
+
+
+
+
+
+</PreferenceScreen>
