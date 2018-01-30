@@ -93,15 +93,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         mistakeAdapter = new ArrayAdapter <String>
-                (MainActivity.this, android.R.layout.simple_list_item_1,
+                (MainActivity.this, R.layout.my_text_view,
                         mistakesList);
 
+
         pointsAdapter = new ArrayAdapter <String>
-                (MainActivity.this, android.R.layout.simple_list_item_1,
+                (MainActivity.this, R.layout.my_text_view2,
                         pointsList);
 
         maxAdapter = new ArrayAdapter <String>
-                (MainActivity.this, android.R.layout.simple_list_item_1,
+                (MainActivity.this, R.layout.my_text_view3,
                         maxList);
 
      //   settings.edit().putString("number_one", "89").apply();
@@ -164,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
                 mistakes.setSelection(valueMistakes);
                 numPoints.setText("Počet bodů: " + String.valueOf(valuePoints));
                 points.setSelection(valuePoints);
+                try {
+                    numSign.setText(getSign(max, valuePoints));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 maxValues.setSelection(max);
                 maxView.setText("Maximální počet bodů: " + String.valueOf(max));
                 count();
